@@ -1,9 +1,17 @@
 <resources>
-    <string name="app_name">A2Education</string>
-    <string name="title_activity_game">GameActivity</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="app_name">MathCation</string>
+    <string name="title_activity_game">Play!</string>
+    <string name="title_activity_settings">Settings</string>
     <string name="question_x_of_x">Question X Of X</string>
     <string name="question">Question</string>
     <string name="score_0">Score: 0</string>
     <string name="solve_for_x">Solve For X</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="john_smith">John Smith</string>
+    <string name="submit">Submit</string>
+    <string name="play">Play</string>
+    <string name="scores">Scores</string>
+    <string name="settings">Settings</string>
+    <string name="how_to_play">How To Play</string>
+    <string name="welcome_to_mathcation">Welcome To MathCation!</string>
 </resources>
