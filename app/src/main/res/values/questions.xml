@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <!--Q1-->
+        <item>-3 + 2x = 11</item>
+        <!--Q2-->
+        <item>4x + 6 = -10</item>
+        <!--Q3-->
+        <item>x + 9 = 18 – 2x</item>
+        <!--Q4-->
+        <item>2x + 6 = 4x -2</item>
+        <!--Q5-->
+        <item>-x -1 = 221 +2x</item>
+        <!--Q6-->
+        <item>15 + 5x = 0</item>
+        <!--Q7-->
+        <item>17x - 12 = 114 + 3x</item>
+        <!--Q8-->
+        <item>3x - 10 = 10 -5x</item>
+        <!--Q9-->
+        <item>12x + 0 = 144</item>
+        <!--Q10-->
+        <item>–10x – 19 = 19 – 8x</item>
+        <!--Q11-->
+        <item>-4x +9 = 7</item>
+        <!--Q12-->
+        <item>-x - 8 = 3</item>
+        <!--Q13-->
+        <item>-x + 1 = -5</item>
+        <!--Q14-->
+        <item>2x + 8 = 4</item>
+        <!--Q15-->
+        <item>x + 1 = 2x -4</item>
+        <!--Q16-->
+        <item>2x -9 = -x - 9</item>
+        <!--Q17-->
+        <item>-3x -9 = x + 4</item>
+        <!--Q18-->
+        <item>-x + 5 = 2x - 2</item>
+        <!--Q19-->
+        <item>-3x - 7 = -x - 6</item>
+        <!--Q20-->
+        <item>x - 3 = 3x</item>
+
+    </string-array>
+</resources>

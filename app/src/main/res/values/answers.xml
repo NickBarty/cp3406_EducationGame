@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="answers">
+        <!--Q1-->
+        <item>7</item>
+        <!--Q2-->
+        <item>-4</item>
+        <!--Q3-->
+        <item>3</item>
+        <!--Q4-->
+        <item>4</item>
+        <!--Q5-->
+        <item>-74</item>
+        <!--Q6-->
+        <item>-3</item>
+        <!--Q7-->
+        <item>9</item>
+        <!--Q8-->
+        <item>2.5</item>
+        <!--Q9-->
+        <item>12</item>
+        <!--Q10-->
+        <item>-19</item>
+        <!--Q11-->
+        <item>0.5</item>
+        <!--Q12-->
+        <item>-11</item>
+        <!--Q13-->
+        <item>6</item>
+        <!--Q14-->
+        <item>-2</item>
+        <!--Q15-->
+        <item>5</item>
+        <!--Q16-->
+        <item>0</item>
+        <!--Q17-->
+        <item>-3.25</item>
+        <!--Q18-->
+        <item>2.3</item>
+        <!--Q19-->
+        <item>-0.5</item>
+        <!--Q20-->
+        <item>-1.5</item>
+        <!--8/11/13-->
+    </string-array>
+</resources>
