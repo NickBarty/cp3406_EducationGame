@@ -7,11 +7,14 @@
     <string name="score_0">Score: 0</string>
     <string name="solve_for_x">Solve For X</string>
     <string name="enter_your_name">Enter Your Name</string>
-    <string name="john_smith">John Smith</string>
+    <string name="john">E.g. John</string>
     <string name="submit">Submit</string>
     <string name="play">Play</string>
     <string name="scores">Scores</string>
     <string name="settings">Settings</string>
     <string name="how_to_play">How To Play</string>
     <string name="welcome_to_mathcation">Welcome To MathCation!</string>
+    <string name="sound_toggle">Sound Toggle</string>
+    <string name="share_to_twitter">Share To Twitter</string>
+    <string name="your_final_score_is">Your Final Score Is</string>
 </resources>

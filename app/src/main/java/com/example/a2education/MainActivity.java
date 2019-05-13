@@ -10,9 +10,12 @@ import android.view.View;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    //    Set the shared preferences for the app
+    //        Set the shared preferences for the app
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String NUM_QUESTIONS = "numQuestions";
+    public static final String SOUND_TOGGLE = "soundToggle";
+
+    //    Set lists to be used to keep track of scores while database isn't implemented fully
     public static final ArrayList<String> HIGHSCORE_NAMES = new ArrayList<>();
     public static final ArrayList<Integer> HIGHSCORE_SCORES = new ArrayList<>();
     public static final ArrayList<Integer> HIGHSCORE_TIME = new ArrayList<>();
