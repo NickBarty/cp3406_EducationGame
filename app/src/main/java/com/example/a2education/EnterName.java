@@ -19,21 +19,27 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class EnterName extends AppCompatActivity {
-    private TextInputEditText nameText;
+    private TextInputEditText nameInput;
     private int score;
-    private boolean soundOnOff;
-
+    private boolean soundToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_name);
-        nameText = findViewById(R.id.nameText);
-        TextView finalScore = findViewById(R.id.finalScore);
-        score = getIntent().getIntExtra("score", 0);
-        SharedPreferences sharedPreferences = getSharedPreferences(MainActivity.SHARED_PREFS, 0);
-        soundOnOff = sharedPreferences.getBoolean(MainActivity.SOUND_TOGGLE, true);
 
+//        Find views
+        TextView finalScore = findViewById(R.id.finalScore);
+        nameInput = findViewById(R.id.nameText);
+
+//        Get intent data
+        score = getIntent().getIntExtra("score", 0);
+
+//        Get shared preferences data
+        SharedPreferences sharedPreferences = getSharedPreferences(MainActivity.SHARED_PREFS, 0);
+        soundToggle = sharedPreferences.getBoolean(MainActivity.SOUND_TOGGLE, true);
+
+//        Set the color of the score on screen
         if (score < 0) {
             finalScore.setTextColor(Color.parseColor("#D32F2F"));
         } else if (score == 0) {
@@ -43,7 +49,8 @@ public class EnterName extends AppCompatActivity {
     }
 
     public void parseName(View view) {
-        String textToParse = Objects.requireNonNull(nameText.getText()).toString();
+//        Checks if the name entered is blank and if not then adds it to the scores and finishes up
+        String textToParse = Objects.requireNonNull(nameInput.getText()).toString();
         if (textToParse.equals("")) {
             Toast.makeText(this, "Please enter a name", Toast.LENGTH_SHORT).show();
         } else {
@@ -54,6 +61,7 @@ public class EnterName extends AppCompatActivity {
     }
 
     public void sendToTwitter(View view) {
+//        Sets up twitter message to be sent
         String textToSend = String.format(Locale.ENGLISH, "I just scored %d in MathCation! Try beat my score!", score);
         Intent twitterIntent = new Intent(Intent.ACTION_SEND);
         twitterIntent.putExtra(Intent.EXTRA_TEXT, textToSend);
@@ -61,12 +69,14 @@ public class EnterName extends AppCompatActivity {
         PackageManager packManager = getPackageManager();
         List<ResolveInfo> resolvedInfoList = packManager.queryIntentActivities(twitterIntent, PackageManager.MATCH_DEFAULT_ONLY);
 
-        if (soundOnOff) {
+        if (soundToggle) {
             MediaPlayer media = MediaPlayer.create(this, R.raw.twitter_send);
             media.start();
         }
 
         boolean isResolved = false;
+
+//        Sends data of message to the twitter app if its installed on the device
         for (ResolveInfo resolveInfo : resolvedInfoList) {
             if (resolveInfo.activityInfo.packageName.startsWith("com.twitter.android")) {
                 twitterIntent.setClassName(
@@ -76,6 +86,8 @@ public class EnterName extends AppCompatActivity {
                 break;
             }
         }
+
+//        Sends data of message to an available browser app instead
         if (isResolved) {
             startActivity(twitterIntent);
         } else {

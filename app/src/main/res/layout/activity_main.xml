@@ -38,7 +38,7 @@
         android:layout_marginEnd="8dp"
         android:backgroundTint="#0288D1"
         android:fontFamily="casual"
-        android:onClick="highScoresDisplay"
+        android:onClick="scoresDisplay"
         android:text="@string/scores"
         android:textSize="30sp"
         android:textStyle="bold"

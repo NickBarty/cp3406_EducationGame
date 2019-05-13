@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     //        Set the shared preferences for the app
     public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String NUM_QUESTIONS = "numQuestions";
+    public static final String NUM_QUESTIONS_TO_ASK = "numQuestions";
     public static final String SOUND_TOGGLE = "soundToggle";
 
     //    Set lists to be used to keep track of scores while database isn't implemented fully
@@ -24,14 +24,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
 
+    //    Start GameActivity
     public void play(View view) {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 
+    //    Display a dialogue on how to play
     public void howToPlayDisplay(View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle("How to play");
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
-    public void highScoresDisplay(View view) {
+    //    Display a dialogue with the scores for the current session
+    public void scoresDisplay(View view) {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
         alertDialog.setTitle("Scores For This Session!");
         String names = HIGHSCORE_NAMES.toString();
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    //    Start the SettingsActivity
     public void settings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
