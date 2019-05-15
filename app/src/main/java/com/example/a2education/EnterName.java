@@ -51,12 +51,13 @@ public class EnterName extends AppCompatActivity {
     public void parseName(View view) {
 //        Checks if the name entered is blank and if not then adds it to the scores and finishes up
         String textToParse = Objects.requireNonNull(nameInput.getText()).toString();
-        if (textToParse.equals("")) {
-            Toast.makeText(this, "Please enter a name", Toast.LENGTH_SHORT).show();
-        } else {
+//        Check for at least one alphanumeric character
+        if (textToParse.matches(".*\\w.*")) {
             MainActivity.HIGHSCORE_NAMES.add(textToParse);
             finish();
             Toast.makeText(this, "Thanks for playing " + textToParse + ", view the scores!", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "Please enter a name", Toast.LENGTH_SHORT).show();
         }
     }
 

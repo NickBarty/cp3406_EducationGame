@@ -114,8 +114,8 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
             MainActivity.HIGHSCORE_TIME.add(totalSecondsCount);
             Intent intent = new Intent(this, EnterName.class);
             intent.putExtra("score", score);
-            startActivity(intent);
             finish();
+            startActivity(intent);
         }
 
 //        Set the question being asked
@@ -275,5 +275,15 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
         sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this, sensor);
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this, sensor);
+    }
 }
