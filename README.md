@@ -46,14 +46,14 @@
 6) Run the command `rm -r index.php`
 7) Run the command `git pull origin master`
 
-That's it!. You should now have a local environment replica of the staging site that is connected to this repository
+That's it! You should now have a local environment replica of the staging site that is connected to this repository
 
 ## Theme Details:
 _To Be Added_
 
 ## Workflow:
 
-###Development:
+##Development:
 - PHP Storm
 
 ###Collaboration:
