@@ -1,4 +1,5 @@
 # CoffeeCan Wordpress Site
+
 ##Contents of this readme
 - [Prerequisites](#prerequisites)
 - [Setting up a local environment](#setting-up-a-local-environment)
@@ -14,7 +15,7 @@
 
 ##Setting up a local environment
 
-####Installing the environment:
+###Installing the environment:
 1) Navigate to the directory where you want your local environment
 2) Open a Git Bash terminal in that directory (Can right click and select from context menu if Git is installed)
 3) Run the command `git clone https://github.com/flurinduerst/WPDistillery.git cp3402_20`
@@ -22,7 +23,7 @@
 5) Navigate to the URL [192.168.33.10/wp-admin]() and login (Username/Password: **admin**)
 6) Navigate to **Plugins -> Add new** and search for **All-in-One WP Migration** and install it
 
-####Setting up the environment:
+###Setting up the environment:
 1) Open a Git Bash terminal in the **Public** directory
 2) Run the command `touch .htaccess`
 3) Run the command `nano .htaccess`
@@ -36,7 +37,7 @@
     ````
 5) Save (`Ctrl + X` Then `Y`) 
 
-####Putting the staging site into local:
+###Putting the staging site into local:
 1) Navigate to the staging server and export the site as a file using the migration plugin (Located in left nav)
 2) Navigate to [192.168.33.10/wp-admin]() and import the file using the migration plugin
 3) Run the command `rm -r wp-content` in a Git Bash terminal within the **Public** directory
@@ -52,22 +53,22 @@ _To Be Added_
 
 ## Workflow:
 
-####Development:
+###Development:
 - PHP Storm
 
-####Collaboration:
+###Collaboration:
 - [Slack](https://slack.com/intl/en-au/) + [Github Integration](https://slack.github.com/)
 - [Trello](https://trello.com/b/7vry2Xm0/team-20-cp3402-a2) + [Slack Integration](https://trello.com/en-AU/platforms/slack)
 - Github
 
-####Deployment:
+###Deployment:
 - Git command line
 - Webhooks
 - [Wordmove](https://github.com/welaika/wordmove)
 
 ##Making changes to the site
 
-####Changes to staging:
+###Changes to staging:
 **Content changes:**
 1) Work on staging server backend directly
 
@@ -75,7 +76,7 @@ _To Be Added_
 1) Commit to this repository
 2) Webhooks automatically pull in changes
 
-####Changes to production:
+###Changes to production:
 1)
 
 ##Wordpress:
