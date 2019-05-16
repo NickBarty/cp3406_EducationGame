@@ -8,10 +8,12 @@
 - [Wordpress](#wordpress)
 - [Contributors](#contributors)
 - [Dev Diaries](#dev-diaries)
+
 ##Prerequisites
 - [Vagrant](https://www.vagrantup.com/)
 
 ##Setting up a local environment
+
 ####Installing the environment:
 1) Navigate to the directory where you want your local environment
 2) Open a Git Bash terminal in that directory (Can right click and select from context menu if Git is installed)
@@ -33,6 +35,7 @@
     php_value max_input_time 300
     ````
 5) Save (`Ctrl + X` Then `Y`) 
+
 ####Putting the staging site into local:
 1) Navigate to the staging server and export the site as a file using the migration plugin (Located in left nav)
 2) Navigate to [192.168.33.10/wp-admin]() and import the file using the migration plugin
@@ -48,18 +51,22 @@ That's it!. You should now have a local environment replica of the staging site 
 _To Be Added_
 
 ## Workflow:
+
 ####Development:
 - PHP Storm
+
 ####Collaboration:
 - [Slack](https://slack.com/intl/en-au/) + [Github Integration](https://slack.github.com/)
 - [Trello](https://trello.com/b/7vry2Xm0/team-20-cp3402-a2) + [Slack Integration](https://trello.com/en-AU/platforms/slack)
 - Github
+
 ####Deployment:
 - Git command line
 - Webhooks
 - [Wordmove](https://github.com/welaika/wordmove)
 
 ##Making changes to the site
+
 ####Changes to staging:
 **Content changes:**
 1) Work on staging server backend directly
